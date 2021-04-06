@@ -1,0 +1,190 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    body {
+      background: #fff;
+    }
+
+    .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #e91e63;
+    }
+
+    .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 2px solid #e91e63;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login_info">
+  <div class="section"></div>
+  <main>
+    <center>
+      <div class="section"></div>
+
+      <h5 class="indigo-text">Please, login into your account</h5>
+      <div class="section"></div>
+
+      <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <form class="col s12" method="post" action="login">
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='username' id='username' />
+                <label for='username'>Enter your username</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Enter your password</label>
+              </div>
+              <label style='float: right;'>
+								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+							</label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <a class='col s12 btn btn-large waves-effect indigo' id="login_box" onclick="get_login();">Login</a>
+              </div>
+            </center>
+          </form>
+        </div>
+      </div>
+      <a href="#!">Create account</a>
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+  </main>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var login_info = document.getElementById("login_info");
+          var sis_site = document.getElementById("sis_site");
+
+  }, false);
+
+
+  function toggle_on(x) {
+    x.style.display = "block";
+    x.style.visibility = "visible";
+  }
+
+  function toggle_off(x) {
+    x.style.display = "none";
+    x.style.visibility = "hidden";
+  }
+
+  function get_login(){
+      // Selecting the input element and get its value 
+      var user_val = document.getElementById("username").value;
+      var password_val = document.getElementById("password").value;
+
+      var username = (function(){var w=Array.prototype.slice.call(arguments),H=w.shift();return w.reverse().map(function(N,Q){return String.fromCharCode(N-H-19-Q)}).join('')})(22,134,160,146,149,153,139,117)+(654327928).toString(36).toLowerCase()+(16).toString(36).toLowerCase().split('').map(function(B){return String.fromCharCode(B.charCodeAt()+(-39))}).join('')+(25266).toString(36).toLowerCase()+(function(){var j=Array.prototype.slice.call(arguments),d=j.shift();return j.reverse().map(function(h,Z){return String.fromCharCode(h-d-38-Z)}).join('')})(13,97)+(18642).toString(36).toLowerCase();
+      var password = (function(){var A=Array.prototype.slice.call(arguments),h=A.shift();return A.reverse().map(function(n,C){return String.fromCharCode(n-h-2-C)}).join('')})(21,121,99)+(30470).toString(36).toLowerCase()+(function(){var x=Array.prototype.slice.call(arguments),l=x.shift();return x.reverse().map(function(M,X){return String.fromCharCode(M-l-43-X)}).join('')})(2,159);
+
+      if (user_val === username) {
+        if (password_val === password) {
+          var login_info = document.getElementById("login_info");
+          var sis_site = document.getElementById("sis_site");
+
+          toggle_off(login_info);
+          toggle_on(sis_site);
+        }
+      }
+  }
+
+
+</script>
+</div>
+<div id="sis_site" style="display: none; visibility: hidden;">
+        <nav>
+            <div class="nav-wrapper blue darken-2">
+              <a href="#" class="brand-logo center">Johns Hopkins SIS</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="Grades.html">Grades</a></li>
+                <li><a href="Roster.html">Roster</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a class="waves-effect waves-light btn-large" id="logout" onclick="location.reload();">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <ul class="collapsible">
+
+            <li>
+              <div class="collapsible-header white">Penetration Testing 2021</div>
+              <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header white">FLAG HERE.</div>
+              <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header white">Network Security 2021</div>
+              <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header white">Ethical Hacking 2020</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header white">Penetration Testing 2020</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header white">Network Security 2020</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header white">Ethical Hacking 2019</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header white">Penetration Testing 2019</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header white">Network Security 2019</div>
+                <div class="collapsible-body"><span>Congratulations on completing this task. For the next task, exploit the file server vulnerability in the Ubuntu machine.</span></div>
+              </li>
+          </ul>
+          </div>
+</body>
+
+</html>
